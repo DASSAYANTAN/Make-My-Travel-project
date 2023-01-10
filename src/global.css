@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@300&family=Oswald&family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #efefef;
+    font-family: "Lato", sans-serif;
+}
+
+.active{
+    background-color: #6739b7 !important;
+    color: #fff !important;
+    border: 1px solid #6739b7 !important;
+}
+
+:root{
+    --base-color:#6739b7;
+}
+
+
+
+/* spinner block*/
+#spinnerBlock{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#spinnerBlock svg {
+  width: 100px;
+  overflow: visible;
+}
+#spinnerBlock svg circle {
+  stroke: var(--base-color);
+  transform-origin: 50px 50px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Slider CSS */
+.slider-wrapper img{
+height: 600px !important;
+object-fit: cover;
+}
+
+.carousel .slide .legend {
+    transition: all .5s ease-in-out;
+    position: absolute;
+    bottom: 0 !important;
+    left: 5%;
+    top: 15% !important;
+    margin-left: 0;
+    height: 250px !important;
+    width: 40% !important;
+    border-radius: 10px;
+    background:rgba(227, 224, 224, 0.181) !important;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity .35s ease-in-out;
+}
+
+.legend h1{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.legend p{
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 1.1em;
+  padding: 10px;
+  line-height: 20px;
+}
+
+.legend button{
+  background-color: #fff;
+  padding: 10px 30px;
+  color: #111;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #888;
+}
+
+.legend button:hover{
+  background-color: #222;
+  color: #fff;
+}

@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import { createRoot } from 'react-dom/client';
+// import AuthProvider from './apis/AuthContextApi';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./global.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+createRoot(document.querySelector("#root")).render(<App />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//instead of wrapping the <App/> in the App.jsx we can wrap it here also with the <AuthProvider></AuthProvider>
+// createRoot(document.querySelector("#root")).render(
+//   <AuthProvider>
+//     <App />
+//   </AuthProvider>
+// );
+
